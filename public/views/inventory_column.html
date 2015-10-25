@@ -1,0 +1,124 @@
+<div class="cl-sidebar" ng-include="'views/menu.html'"></div>
+<div class="container-fluid" id="pcont" >
+    <!-- TOP NAVBAR -->
+    <div id="head-nav" class="navbar navbar-default">
+        <div class="tab-container" ng-include="'views/store_list.html'"></div>
+    </div>
+    <div id="view" class="cl-mcont">
+        <div class="row">
+        <div class="col-md-12">
+            <div class="block-flat">
+                <div class="header">
+                    <h3 class="pull-left">Inventory</h3>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-trans"><a href="/{{ storeId }}/inventory/list">List</a></button>
+                        <button type="button" class="btn btn-trans disabled"><a href="/{{ storeId }}/inventory/column">Column</a></button>
+                    </div>
+
+                    <div class="pull-right">
+                        pages:
+                        <a href="/{{ storeId }}/inventory/column/1">1</a>
+                        <a href="/{{ storeId }}/inventory/column/2">2</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="content col-md-6">
+                    <div class="table-responsive">
+                        <table id="productListTable" datatable="ng" ng-cloak>
+                            <thead class="no-border">
+                            <tr>
+                                <th class="text-center"><strong>barcode</strong></th>
+                                <th class="text-center"><strong>name</strong></th>
+                                <th class="text-center"><strong>qty</strong></th>
+                                <th class="text-center"><strong>cost</strong></th>
+                                <th class="text-center"><strong>category</strong></th>
+                            </tr>
+                            </thead>
+                            <tbody class="no-border-y">
+                            <tr dt-rows ng-repeat="inventory in inventories">
+                                <td class="text-center">{{ inventory.Barcode }}</td>
+                                <td class="text-center"><a href="/{{ storeId }}/inventory/column/{{ page }}/detail/{{inventory.Id}}">{{ inventory.Name }}</a></td>
+                                <td class="text-center">{{ inventory.Qty }}</td>
+                                <td class="text-center">{{ inventory.Cost }}</td>
+                                <td class="text-center">{{ inventory.Category }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="content col-md-6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>name</label>
+                                <div >
+                                    <input type="text" class="form-control" name="vendor" ng-model="inventory.Name"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>barcode</label>
+                                <div >
+                                    <input type="text" class="form-control" name="vendor" ng-model="inventory.Barcode"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>qty</label>
+                                <div >
+                                    <input type="text" class="form-control" name="vendor" ng-model="inventory.Qty"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>cost</label>
+                                <div >
+                                    <input type="text" class="form-control" name="vendor" ng-model="inventory.Cost"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>price</label>
+                                <div >
+                                    <input type="text" class="form-control" name="vendor" ng-model="inventory.Price"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12">
+                                <label>category</label>
+                                <div >
+                                    <input type="text" class="form-control" name="vendor" ng-model="inventory.Category"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</div>
+

@@ -1,0 +1,124 @@
+<div class="cl-sidebar" ng-include="'views/menu.html'"></div>
+<div class="container-fluid" id="pcont" >
+    <!-- TOP NAVBAR -->
+    <div id="head-nav" class="navbar navbar-default">
+        <div class="tab-container" ng-include="'views/store_list.html'"></div>
+    </div>
+    <div id="view" class="cl-mcont">
+
+
+
+
+<div>
+
+            <div class="block-flat">
+                <div class="header">
+                    <h3 class="pull-left">Inventory</h3>
+                        <span class="pull-right">
+                            <a href="/{{ storeId }}/inventory/list/1">Back to list</a>
+                        </span>
+
+                    <div class="clearfix"></div>
+                </div>
+                <div class="content" id="details">
+                    <form name="productDetailsForm" class="" role="form" novalidate>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                            <label>name</label>
+                            <div>
+                                <input type="text" class="form-control" name="sku" ng-model="inventory.Name"/>
+                            </div>
+                                </div>
+                            <div class="col-sm-6 col-md-6">
+                            <label>barcode</label>
+                            <div >
+                                <input type="text" class="form-control" name="vendor" ng-model="inventory.Barcode"/>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <label>quantity</label>
+                                    <div>
+                                        <input type="text" class="form-control" name="sku" ng-model="inventory.Qty"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <label>price</label>
+                                    <div >
+                                        <input type="text" class="form-control" name="vendor" ng-model="inventory.Price"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <label>cost</label>
+                                    <div>
+                                        <input type="text" class="form-control" name="sku" ng-model="inventory.Cost"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <label>tax</label>
+                                    <div >
+                                        <input type="text" class="form-control" name="vendor" ng-model="inventory.Tax"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <label>brand</label>
+                                    <div>
+                                        <input type="text" class="form-control" name="sku" ng-model="inventory.Brand"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <label>discount</label>
+                                    <div >
+                                        <input type="text" class="form-control" name="vendor" ng-model="inventory.Discount"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>note</label>
+                            <div>
+                                <textarea class="form-control" rows="20" ng-model="inventory.Content"></textarea>
+                            </div>
+                        </div>
+
+
+
+
+                    <div class="clearfix"></div>
+                     </form>
+                </div>
+
+            </div>
+
+
+
+
+</div>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+
+
+
+</script>
+
