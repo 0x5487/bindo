@@ -8,7 +8,9 @@ there should be 4 sections.  However, I am guessing that is a ruting job.  so, I
 1. clone the repo
 2. switch to the app directory
 3. run `npm install`
-2. run `node app.js`
+4. run `node app.js`
+5. login user `bindo` pword `bindo`
+
 
 ## Framework or library
 
